@@ -64,7 +64,7 @@ final class AppleScript: Script {
     func run(withAppleEvent event: NSAppleEventDescriptor?, completionHandler: (() -> Void)? = nil) throws {
         
         guard self.descriptor.url.isReachable else {
-            throw ScriptFileError(kind: .existance, url: self.descriptor.url)
+            throw ScriptFileError(kind: .existence, url: self.descriptor.url)
         }
         
         let task = try NSUserAppleScriptTask(url: self.descriptor.url)

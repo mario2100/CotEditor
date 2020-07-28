@@ -60,7 +60,7 @@ final class PersistentOSAScript: Script {
     func run(completionHandler: (() -> Void)? = nil) throws {
         
         guard self.descriptor.url.isReachable else {
-            throw ScriptFileError(kind: .existance, url: self.descriptor.url)
+            throw ScriptFileError(kind: .existence, url: self.descriptor.url)
         }
         
         var errorInfo: NSDictionary? = NSDictionary()
@@ -87,7 +87,7 @@ final class PersistentOSAScript: Script {
         }
         
         guard self.descriptor.url.isReachable else {
-            throw ScriptFileError(kind: .existance, url: self.descriptor.url)
+            throw ScriptFileError(kind: .existence, url: self.descriptor.url)
         }
         
         var errorInfo: NSDictionary?

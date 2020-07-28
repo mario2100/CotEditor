@@ -35,7 +35,7 @@ extension UserDefaults {
     ///   - key: The typed UserDefaults key to obseve the change of its value.
     ///   - queue: The operation queue where to perform the `changeHandler`.
     ///   - options: A combination of the NSKeyValueObservingOptions values that specifies what is included in observation notifications.
-    ///   - changeHandler: The block to be executed when the observerd the observed deafault is updated.
+    ///   - changeHandler: The block to be executed when the observed the observed deafault is updated.
     ///   - change: The information about the change.
     /// - Returns: An observer object.
     func observe<Value>(key: DefaultKey<Value>, queue: OperationQueue? = .main, options: NSKeyValueObservingOptions = [], changeHandler: @escaping (_ change: UserDefaultsObservation.Change<Value>) -> Void) -> UserDefaultsObservation {

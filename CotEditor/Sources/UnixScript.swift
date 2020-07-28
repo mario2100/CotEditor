@@ -78,7 +78,7 @@ final class UnixScript: Script {
         
         // check script file
         guard self.descriptor.url.isReachable else {
-            throw ScriptFileError(kind: .existance, url: self.descriptor.url)
+            throw ScriptFileError(kind: .existence, url: self.descriptor.url)
         }
         guard try self.descriptor.url.resourceValues(forKeys: [.isExecutableKey]).isExecutable ?? false else {
             throw ScriptFileError(kind: .permission, url: self.descriptor.url)

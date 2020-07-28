@@ -419,7 +419,7 @@ private extension SyntaxManager.StyleDictionary {
     }
     
     
-    /// Convert to YAML serialization comaptible colletion recursively.
+    /// Convert to YAML serialization compatible colletion recursively.
     var yamlEncodable: Self {
         
         return self.mapValues(Self.convertToYAMLEncodable)

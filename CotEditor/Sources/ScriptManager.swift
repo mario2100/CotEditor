@@ -338,7 +338,7 @@ final class ScriptManager: NSObject, NSFilePresenter {
     private func revealScript(at url: URL) throws {
         
         guard url.isReachable else {
-            throw ScriptFileError(kind: .existance, url: url)
+            throw ScriptFileError(kind: .existence, url: url)
         }
         
         NSWorkspace.shared.activateFileViewerSelecting([url])
